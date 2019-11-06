@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "nested-folder",
+  "builds": [
+    {
+      "src": "nested-folder/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "nested-folder/$1" }]
+}
